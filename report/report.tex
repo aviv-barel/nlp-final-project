@@ -1,114 +1,54 @@
 % Hebrew-English Code-Switching Sentiment — final project report
-% Max 8 pages per course guidelines. Figures are in results/figures/.
-%
-% To use the course Overleaf template (https://www.overleaf.com/read/pjngxfknwfkj):
-% copy the body sections below into that template's document body and keep its
-% preamble/style files.
-%
-% NOTE: compiles under pdfLaTeX as-is. Hebrew example strings are romanised so
-% that no RTL/Unicode font setup is required. To typeset the examples in Hebrew
-% script instead, compile with XeLaTeX or LuaLaTeX and add:
-%     \usepackage{polyglossia}
-%     \setmainlanguage{english}
-%     \setotherlanguage{hebrew}
-%     \newfontfamily\hebrewfont[Script=Hebrew]{David CLM}
-% then wrap Hebrew strings as \texthebrew{...}.
-%
-% COMPILED AND VERIFIED (2026-08-09): pdflatex, 2 passes, via BasicTeX.
-% 8 pages exactly (at the limit, not over — page 8 ends with room to spare).
-% All figures confirmed rendering as real images (not placeholder boxes),
-% all citations and cross-references resolved cleanly, zero warnings on the
-% second pass. microtype is set to protrusion-only (expansion=false) because
-% BasicTeX's default fonts aren't expansion-ready — full microtype expansion
-% would need font packages this minimal install doesn't include.
-% Topic classification (a secondary generality check) was removed from this
-% report — under-powered result that risked distracting from the primary
-% sentiment findings. Still available in the notebook and results/ if wanted.
+% Figures are in results/figures/. Code: https://github.com/aviv-barel/nlp-final-project
 
-\documentclass[11pt,a4paper]{article}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
 
-\usepackage[margin=1in]{geometry}
+\title{Code-Switching as a Controlled Variable: Hebrew--English Mixing\\
+Degrades Sentiment Classification and Displaces Representations}
+\author{Aviv Barel (ID. 209055722)}
+\date{Submitted as final project report for the NLP course, Reichman University, 2026}
+
+\usepackage{natbib}
 \usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{hyperref}
-\usepackage[table]{xcolor}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage[protrusion=true,expansion=false]{microtype} % expansion needs
-  % font-expansion-ready fonts BasicTeX doesn't ship by default; protrusion
-  % alone (still a real typographic improvement) works fine without them
-
 \hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue}
-% Two paths, tried in order: "figures/" works on Overleaf if you upload the
-% report/figures/ folder into the SAME Overleaf project folder as this .tex
-% file (this is the setup to use — see report/figures/ in the repo, just
-% drag its 4 PNGs into Overleaf's file list). "../results/figures/" is a
-% fallback for compiling locally from this repo's own report/ directory.
 \graphicspath{{../results/figures/}}
 
-\title{\textbf{Code-Switching as a Controlled Variable:\\
-Hebrew--English Mixing Degrades Sentiment Classification\\
-and Displaces Representations}}
-
-\author{Aviv Barel \\ Reichman University \\ \texttt{avivitzhak.barelbal@post.runi.ac.il} \\ Student ID: 209055722}
-\date{}
-
 \begin{document}
+
 \maketitle
 
-\begin{abstract}
+\section{Introduction}
+
 Israeli technology workplaces communicate in continuously mixed Hebrew and
-English, yet code-switching is normally treated in NLP as a binary corpus
-property: text either is code-mixed or it is not. We instead treat mixing as
-an \emph{ordered, controlled variable}. We construct a Hebrew--English
-code-switched sentiment dataset in which 105 seed sentences are each rendered
-at four mixing levels (0/30/60/100\% English) with propositional content held
-constant, so that differences across levels can be interpreted primarily as
-effects of the controlled mixing manipulation. Fine-tuning two encoders --- the
-multilingual mmBERT and the Hebrew-specific DictaBERT --- we find that models
-trained only on pure Hebrew degrade significantly as mixing rises
-(Cochran--Armitage $p=0.042$ and $p=0.019$ respectively), with the sharpest
-fall between 30\% and 60\% mixing, where DictaBERT's accuracy approaches the
-three-class chance level. Training on mixed data recovers most of the loss
-(pooled accuracy $0.59\!\rightarrow\!0.94$ and $0.42\!\rightarrow\!0.84$,
-Fisher $p<10^{-5}$) and we find no statistically significant degradation trend
-under mixed training. In our experimental setting, the Hebrew-\emph{specific}
-model is the more fragile of the two at every mixing level, and it also
-drifts roughly twice as far in embedding space; across models and mixing
-levels, embedding drift tracks accuracy loss ($\rho=0.93$, $n=6$). Hebrew
-specialisation thus appears to reduce robustness to code-switching in this
-setting, and the results are consistent with representational displacement
-as a contributing mechanism. A further, task-free check probes whether this
-is sentiment-specific: does the model still recognise two mixing-level
-variants as the same sentence? That signal degrades over the identical
-30--60\% window with no labelled data required, providing complementary
-evidence that the effect is not confined to the sentiment classification
-setup.
-\end{abstract}
-
-\section{Problem and Motivation}
-
-Hebrew--English code-switching is common in Israeli technology
-workplaces. A single Slack message may carry Hebrew syntax with English
+English. A single Slack message may carry Hebrew syntax with English
 technical vocabulary (\emph{ha-deployment karas be'emtsa ha-laila} --- ``the
 deployment crashed in the middle of the night'', where only
 \emph{deployment} switches), English syntax with Hebrew adverbials, or an
-unpredictable alternation of both. NLP systems
-deployed on this text --- sentiment monitoring, incident triage, employee
-feedback analysis --- are typically evaluated either on clean Hebrew or on
-clean English, and their reported accuracy may therefore substantially
-overstate field performance.
+unpredictable alternation of both. NLP systems deployed on this text ---
+sentiment monitoring, incident triage, employee feedback analysis --- are
+typically evaluated either on clean Hebrew or on clean English, and their
+reported accuracy may therefore substantially overstate field performance.
 
-Existing code-switching resources treat mixing as a fixed property of a
-corpus. This obscures the question a practitioner actually faces: \emph{how
-much} mixing is tolerable before a model fails, and does the failure arrive
-gradually or as a cliff? Answering that requires varying mixing while holding
-meaning fixed --- an experimental manipulation that naturally-occurring
-corpora cannot provide, because in real data the amount of mixing is
-confounded with topic, speaker, and register.
+Existing code-switching resources treat mixing as a fixed, binary property of
+a corpus: text either is code-mixed or it isn't. This obscures the question a
+practitioner actually faces: \emph{how much} mixing is tolerable before a
+model fails, and does the failure arrive gradually or as a cliff? Answering
+that requires varying mixing while holding meaning fixed --- an experimental
+manipulation that naturally-occurring corpora cannot provide, because in real
+data the amount of mixing is confounded with topic, speaker, and register.
+This project's motivation is to make mixing itself the controlled variable:
+we construct a Hebrew--English code-switched sentiment dataset in which 105
+seed sentences are each rendered at four mixing levels (0/30/60/100\%
+English) with propositional content held constant, so that differences
+across levels can be interpreted primarily as effects of the controlled
+mixing manipulation.
 
-We therefore ask four questions:
+We ask four questions:
 \begin{enumerate}
   \itemsep0.15em
   \item Does sentiment accuracy degrade as Hebrew--English mixing increases,
@@ -121,10 +61,24 @@ We therefore ask four questions:
         NLP tasks more generally?
 \end{enumerate}
 
-\section{Related Work}
+In brief, fine-tuning two encoders --- the multilingual mmBERT and the
+Hebrew-specific DictaBERT --- we find that models trained only on pure Hebrew
+degrade significantly as mixing rises, with the sharpest fall between 30\%
+and 60\% mixing. Training on mixed data recovers most of the loss and removes
+the measurable degradation trend. The Hebrew-\emph{specific} model is the
+more fragile of the two at every mixing level, and it also drifts roughly
+twice as far in embedding space; across models and mixing levels, embedding
+drift tracks accuracy loss. A further, task-free check probes whether this is
+sentiment-specific: does the model still recognise two mixing-level variants
+as the same sentence? That signal degrades over the identical 30--60\% window
+with no labelled data required, providing complementary evidence that the
+effect is not confined to the sentiment classification setup. Full results
+and analysis are in Section~\ref{sec:results}.
+
+\subsection{Related Work}
 
 \paragraph{Code-mixed sentiment.} The closest prior work is SemEval-2020
-Task~9, \textsc{SentiMix} \cite{patwa2020semeval}, which provides
+Task~9, \textsc{SentiMix} \citep{patwa2020semeval}, which provides
 sentence-level sentiment over Hinglish (Hindi--English) and Spanglish
 (Spanish--English) code-mixed tweets, approximately 20K and 19K items
 respectively. The best submitted systems reached $75.0$ F1 on Hinglish and
@@ -136,25 +90,24 @@ proportion, we convert ``code-mixed text is harder'' into a dose--response
 curve and can localise \emph{where} in that range the failure occurs.
 
 \paragraph{Code-switching benchmarks.} \textsc{GLUECoS}
-\cite{khanuja2020gluecos} is the standard evaluation suite for code-switched
+\citep{khanuja2020gluecos} is the standard evaluation suite for code-switched
 NLP, spanning language identification, POS, NER, sentiment, QA, and NLI for
 English--Hindi and English--Spanish. Its central finding --- that multilingual
 models fine-tuned on \emph{artificially generated} code-switched data
 outperform all alternatives --- is one we independently reproduce on a new
-language pair. \textsc{LinCE} \cite{aguilar2020lince} offers a comparable
+language pair. \textsc{LinCE} \citep{aguilar2020lince} offers a comparable
 centralised benchmark. Neither covers Hebrew--English.
 
-\paragraph{Models.} mmBERT \cite{marone2025mmbert} is a ModernBERT-based
+\paragraph{Models.} mmBERT \citep{marone2025mmbert} is a ModernBERT-based
 multilingual encoder pretrained on 3T tokens spanning over 1800 languages, and
 is the first multilingual encoder to improve on XLM-R. For Hebrew, DictaBERT
-\cite{shmidman2023dictabert} and AlephBERTGimmel \cite{gueta2022alephbertgimmel}
+\citep{shmidman2023dictabert} and AlephBERTGimmel \citep{gueta2022alephbertgimmel}
 are strong Hebrew pretrained encoders. To our knowledge, neither Hebrew model
 has previously been evaluated on Hebrew--English code-switched input.
 
-\section{Dataset}
-\label{sec:dataset}
+\section{Methodology}
 
-\paragraph{Construction.} We wrote 105 seed sentences in Israeli tech
+\paragraph{Dataset construction.} We wrote 105 seed sentences in Israeli tech
 workplace registers --- deployments, standups, code review, incidents,
 sprints, hiring, infrastructure --- balanced across positive, negative, and
 neutral sentiment. Each seed was rendered at four mixing levels:
@@ -175,11 +128,9 @@ neutral sentiment. Each seed was rendered at four mixing levels:
 
 \noindent yielding $105\times4=420$ items. Because the four variants of a seed
 express the same proposition, mixing level functions as a manipulated
-independent variable.
-
-\paragraph{Generation.} The variants are \emph{LLM-generated renderings} of
-hand-written seeds, not scraped Slack logs. This is a deliberate trade: it
-buys clean experimental control over mixing level at the cost of natural
+independent variable. The variants are \emph{LLM-generated renderings} of the
+hand-written seeds, not scraped Slack logs --- a deliberate trade that buys
+clean experimental control over mixing level at the cost of natural
 distributional realism.
 
 \paragraph{Annotation.} Every item's sentiment label was collected via two
@@ -196,8 +147,6 @@ zero seed overlap between splits --- since the four variants of a seed are
 near-paraphrases of each other, this ensures no near-paraphrase of a test item
 appears in training.
 
-\section{Method}
-
 \paragraph{Embedding geometry.} For each seed and each of six encoders, we
 extract embeddings (mean-pooled final hidden states for masked-LM encoders,
 native \texttt{encode()} for sentence-transformers) and compute the cosine
@@ -206,16 +155,16 @@ constant within a seed, this distance measures representational displacement
 associated with the controlled mixing manipulation.
 
 \paragraph{Fine-tuning.} We fine-tune mmBERT and DictaBERT for 3-way sentiment
-classification under two conditions:
-\begin{itemize}
-  \itemsep0.1em
-  \item \textbf{Condition A} --- trained on 0\% (pure Hebrew) items only ($n=73$).
-  \item \textbf{Condition B} --- trained on the full mixed training set ($n=292$).
-\end{itemize}
-Both are evaluated on the identical held-out test set, broken out by mixing
-level. Hyperparameters are held fixed across all runs for comparability
-(5 epochs, batch 16, lr $2\times10^{-5}$, weight decay 0.01, warmup ratio 0.1,
-max length 64, seed 42), selecting the best checkpoint by validation macro-F1.
+classification under two conditions: \textbf{Condition A} --- trained on 0\%
+(pure Hebrew) items only ($n=73$); \textbf{Condition B} --- trained on the
+full mixed training set ($n=292$). Both are evaluated on the identical
+held-out test set, broken out by mixing level. Hyperparameters are held fixed
+across all runs for comparability (5 epochs, batch 16, lr $2\times10^{-5}$,
+weight decay 0.01, warmup ratio 0.1, max length 64, seed 42), selecting the
+best checkpoint by validation macro-F1. We used only two encoders for
+fine-tuning (rather than all six used for the embedding analysis) to keep
+training scope tractable on a single machine; the optional xlm-roberta and
+heBERT ``older baseline'' pair was scoped out for the same reason.
 
 \paragraph{Statistics.} Per-mixing-level test cells contain only $n=16$ items,
 so we report 95\% Wilson score intervals rather than bare point estimates and
@@ -224,18 +173,30 @@ tested on pooled data: condition A versus B via Fisher's exact test
 ($n=64$ per condition), and degradation across mixing level via the
 Cochran--Armitage trend test.
 
-\paragraph{Generality check (Q4).} A cheap-to-add, label-free test probes
-whether the above is sentiment-specific. \emph{Semantic equivalence} requires
-no new labels or training: since a seed's four variants are paraphrases by
+\paragraph{Generality check.} A cheap-to-add, label-free test probes whether
+the above is sentiment-specific. \emph{Semantic equivalence} requires no new
+labels or training: since a seed's four variants are paraphrases by
 construction, we treat a seed's own $(0\%, L\%)$ pair as a positive
 (same-meaning) example and a random \emph{different} seed's $(0\%, L\%)$ pair
-as a negative example, use cosine similarity from the Phase 2 embeddings as a
+as a negative example, use cosine similarity from the embeddings above as a
 same/different score, and report ROC-AUC ($0.5{=}$chance,
 $1.0{=}$perfect separation) at each mixing level $L$.
 
-\section{Results}
+\paragraph{Implementation.} The pipeline is implemented in Python with
+HuggingFace \texttt{transformers} and \texttt{datasets}, run on Apple Silicon
+using MPS acceleration (no dedicated CUDA GPU). Each fine-tuning run is a
+single 5-epoch job with a 3-class classification head, practical to complete
+on a single machine without cluster infrastructure. The main technical
+challenge was diagnosing an anisotropy artefact in XLM-R's raw cosine
+distances (Section~\ref{sec:results}): distances near zero initially looked
+like robustness, until a t-SNE projection showed the geometry was encoding
+mixing level perfectly fine, just on a compressed scale.
+
+\section{Experimental results}
+\label{sec:results}
 
 \subsection{Code-switching displaces representations}
+\label{sec:drift-section}
 
 \begin{figure}[t]
 \centering
@@ -343,13 +304,13 @@ establish a causal link.
 \centering
 \includegraphics[width=0.75\linewidth]{fig4_semantic_equivalence.png}
 \caption{AUC for distinguishing a true paraphrase (same seed, different
-mixing level) from an unrelated sentence, using Phase 2 embeddings. No new
-labels or training.}
+mixing level) from an unrelated sentence, using the embeddings from
+Section~\ref{sec:results}. No new labels or training.}
 \label{fig:semeq}
 \end{figure}
 
 \textbf{Semantic equivalence} (Figure~\ref{fig:semeq}) needs no labels, only
-the embeddings already computed in Phase 2. All six encoders separate true
+the embeddings already computed above. All six encoders separate true
 paraphrases from unrelated sentences well above chance at every mixing level,
 but the two fine-tuned models decline over exactly the window identified
 above: mmBERT $0.95\!\rightarrow\!0.78$ and DictaBERT
@@ -359,7 +320,8 @@ closer to their training objective. This provides complementary evidence,
 without depending on labeled data for a downstream task, that the observed
 representational changes are not confined to the sentiment classification
 setup --- though this check still relies on the same underlying embeddings
-as \S5.1, so it is not a fully independent replication.
+as Section~\ref{sec:drift-section}, so it is not a fully independent
+replication.
 
 \subsection{Annotator ceiling}
 \label{sec:annotator-ceiling}
@@ -371,7 +333,7 @@ training split. It indicates that our corpus encodes sentiment unusually
 unambiguously --- a property of the dataset, not evidence that the task is
 easy in the wild.
 
-\section{Conclusion}
+\section{Discussion}
 
 Hebrew--English code-switching measurably degrades sentiment classification,
 and does so in a graded rather than binary fashion: accuracy is largely
@@ -393,46 +355,21 @@ sentiment classifier head, contributes to the effect.
 The practical implication is direct: a Hebrew-tuned model validated on clean
 Hebrew will overstate its performance on real Israeli workplace text, and a
 simple and effective remedy in our setting is to place mixed-language data in
-the training set.
+the training set. At the same time, several aspects of the setup bound how
+far these results generalise: the corpus is LLM-generated rather than sampled
+from real Slack messages, the test set is small (16 items per mixing-level
+cell), and the 420 items come from only 105 underlying seeds, so pooled
+significance tests should be read with that repeated-measures structure in
+mind. The dose--response framing itself, however, is the main methodological
+contribution here, and it is directly reusable for other language pairs and
+other NLP tasks beyond sentiment.
 
-\begin{thebibliography}{9}
-\small
+\section{Code}
 
-\bibitem{aguilar2020lince}
-G.~Aguilar, S.~Kar, and T.~Solorio.
-\newblock LinCE: A Centralized Benchmark for Linguistic Code-switching Evaluation.
-\newblock In \emph{Proceedings of LREC}, 2020.
+Code, data, and the full analysis notebook are available at:
+\url{https://github.com/aviv-barel/nlp-final-project}
 
-\bibitem{gueta2022alephbertgimmel}
-E.~Gueta, A.~Shmidman, S.~Shmidman, C.~S.~Shmidman, J.~Guedalia, M.~Koppel,
-  D.~Bareket, A.~Seker, and R.~Tsarfaty.
-\newblock Large Pre-Trained Models with Extra-Large Vocabularies: A Contrastive
-  Analysis of Hebrew BERT Models and a New One to Outperform Them All.
-\newblock 2022.
-
-\bibitem{khanuja2020gluecos}
-S.~Khanuja, S.~Dandapat, A.~Srinivasan, S.~Sitaram, and M.~Choudhury.
-\newblock GLUECoS: An Evaluation Benchmark for Code-Switched NLP.
-\newblock In \emph{Proceedings of ACL}, 2020.
-\newblock \url{https://aclanthology.org/2020.acl-main.329/}
-
-\bibitem{marone2025mmbert}
-M.~Marone et al.
-\newblock mmBERT: A Modern Multilingual Encoder with Annealed Language Learning.
-\newblock \emph{arXiv:2509.06888}, 2025.
-
-\bibitem{patwa2020semeval}
-P.~Patwa, G.~Aguilar, S.~Kar, S.~Pandey, S.~PYKL, B.~Gamb\"ack, T.~Chakraborty,
-  T.~Solorio, and A.~Das.
-\newblock SemEval-2020 Task 9: Overview of Sentiment Analysis of Code-Mixed Tweets.
-\newblock In \emph{Proceedings of SemEval}, 2020.
-\newblock \url{https://aclanthology.org/2020.semeval-1.100/}
-
-\bibitem{shmidman2023dictabert}
-S.~Shmidman, A.~Shmidman, and M.~Koppel.
-\newblock DictaBERT: A State-of-the-Art BERT Suite for Modern Hebrew.
-\newblock \emph{arXiv:2308.16687}, 2023.
-
-\end{thebibliography}
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}
