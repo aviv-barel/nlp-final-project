@@ -1,0 +1,5 @@
+id,text,reviewer1_sentiment,reviewer2_sentiment,final_sentiment
+seed_090_60,We released a small patch ל-fix yesterday's issue.,positive,neutral,neutral
+seed_090_0,שחררנו פאץ' קטן לתיקון הבעיה מאתמול.,positive,neutral,neutral
+seed_090_30,שחררנו patch קטן ל-fix ה-issue מאתמול.,positive,neutral,neutral
+seed_090_100,We released a small patch to fix yesterday's issue.,positive,neutral,neutral

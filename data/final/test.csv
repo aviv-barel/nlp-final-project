@@ -1,0 +1,65 @@
+id,mixing_level,text,sentiment
+seed_041_0,0,היעדים שהוגדרו היו לא ריאליים מלכתחילה.,negative
+seed_041_100,100,The goals that were set were totally unrealistic from the start.,negative
+seed_041_30,30,ה-goals שהוגדרו היו totally unrealistic מלכתחילה.,negative
+seed_041_60,60,The goals שwere set were totally unrealistic from the start.,negative
+seed_023_0,0,"תהליך הקליטה שלנו מבולגן, כל אחד מסביר לו משהו אחר.",negative
+seed_023_100,100,Our onboarding process is totally messy — everyone explains something different to him.,negative
+seed_023_30,30,"ה-onboarding process שלנו totally מבולגן, כל אחד מסביר לו משהו אחר.",negative
+seed_023_60,60,"Our onboarding process is totally messy, everyone explains לו something different.",negative
+seed_046_0,0,ניסיתי לעשות פוש ונתקלתי בקונפליקטים בכל קובץ.,negative
+seed_046_100,100,I tried to push and ran into conflicts in every file.,negative
+seed_046_30,30,ניסיתי לעשות push ונתקלתי ב-conflicts בכל file.,negative
+seed_046_60,60,I tried to push ו-ran into conflicts בevery file.,negative
+seed_037_0,0,"הצוות עמד ביעדים השנה, כולם ממש גאים בהישג.",positive
+seed_037_100,100,"The team hit its goals this year, everyone is totally proud of the achievement.",positive
+seed_037_30,30,"ה-team עמד ב-OKRs השנה, כולם totally גאים ב-achievement.",positive
+seed_037_60,60,"The team hit the goals השנה, everyone is totally proud of the achievement.",positive
+seed_050_0,0,המעבר למיקרוסרביסים הפחית משמעותית את הזמן שלוקח לשחרר פיצ'ר.,positive
+seed_050_100,100,The move to microservices significantly reduced the time it takes to ship a feature.,positive
+seed_050_30,30,ה-move ל-microservices הפחית significantly את הזמן שלוקח לשחרר feature.,positive
+seed_050_60,60,The move to microservices significantly reduced את the time it takes to ship a feature.,positive
+seed_015_0,0,התקרית נמשכה כל הלילה ולקוחות התלוננו בלי הפסקה.,negative
+seed_015_100,100,The incident dragged on all night and customers were complaining non-stop.,negative
+seed_015_30,30,ה-incident נמשכה כל הלילה ו-customers התלוננו totally בלי הפסקה.,negative
+seed_015_60,60,The incident נמשכה all night ו-customers were complaining non-stop.,negative
+seed_006_0,0,השעה שתיים בלילה ואנחנו עדיין מנסים להעלות את השרתים אחרי הדיפלוי.,negative
+seed_006_100,100,It's 2am and we're still trying to bring the servers back up after the deployment.,negative
+seed_006_30,30,השעה שתיים בלילה ואנחנו still מנסים להעלות את ה-servers אחרי ה-deployment.,negative
+seed_006_60,60,It's 2am ואנחנו still trying להעלות the servers after the deployment.,negative
+seed_098_0,0,הגייטוויי מנתב את כל הבקשות לשירותים הפנימיים.,neutral
+seed_098_100,100,The gateway routes all the requests to the internal services.,neutral
+seed_098_30,30,ה-gateway מנתב את כל ה-requests ל-internal services.,neutral
+seed_098_60,60,The gateway routes all the requests לthe internal services.,neutral
+seed_040_0,0,"היעד המרכזי הושג מוקדם מהצפוי, זה הישג ממש יפה.",positive
+seed_040_100,100,"The main goal was achieved earlier than expected, that's a really nice achievement.",positive
+seed_040_30,30,"ה-main goal הושג earlier מהצפוי, זה really nice achievement.",positive
+seed_040_60,60,"The main goal was achieved earlier מ-expected, that's a really nice achievement.",positive
+seed_062_0,0,יש לנו דשבורד שמציג את כל המטריקות של האינפרה.,neutral
+seed_062_100,100,We have a dashboard that shows all the infra metrics.,neutral
+seed_062_30,30,יש לנו dashboard שמציג את כל ה-metrics של ה-infra.,neutral
+seed_062_60,60,We have a dashboard שshows all the metrics of the infra.,neutral
+seed_004_0,0,סוף סוף הצלחנו לעשות דיפלוי אוטומטי בלי התערבות ידנית.,positive
+seed_004_100,100,"We finally managed to get automatic deployment working, with zero manual intervention.",positive
+seed_004_30,30,"סוף סוף הצלחנו לעשות automatic deployment, totally בלי manual intervention.",positive
+seed_004_60,60,"Finally הצלחנו to do automatic deployment, totally without manual intervention.",positive
+seed_022_0,0,היא התאקלמה מהר מאוד והרגישה חלק מהצוות כבר בשבוע הראשון.,positive
+seed_022_100,100,She adjusted super fast and felt totally part of the team already in the first week.,positive
+seed_022_30,30,היא התאקלמה super fast והרגישה totally part מה-team כבר בשבוע הראשון.,positive
+seed_022_60,60,She adjusted super fast ו-felt totally part of the team כבר in the first week.,positive
+seed_085_0,0,"האונר של הטיקט הזה לא ברור, כל אחד חושב שזה מישהו אחר.",negative
+seed_085_100,100,"The owner of this ticket isn't clear, everyone thinks it's someone else.",negative
+seed_085_30,30,"ה-owner של ה-ticket הזה לא clear, כל אחד חושב שזה מישהו אחר.",negative
+seed_085_60,60,"The owner של this ticket isn't clear, everyone thinks it's someone else.",negative
+seed_052_0,0,הלואד באלאנסר לא חילק את התעבורה נכון והשרת אחד קרס מעומס.,negative
+seed_052_100,100,The load balancer didn't distribute the traffic correctly and one server crashed from overload.,negative
+seed_052_30,30,ה-load balancer לא חילק את ה-traffic נכון והשרת אחד קרס מ-overload.,negative
+seed_052_60,60,The load balancer didn't distribute את the traffic correctly ו-one server crashed from overload.,negative
+seed_080_0,0,הטיקט הזה כבר שבועיים בבקלוג ואף אחד לא נגע בו.,negative
+seed_080_100,100,This ticket has been sitting in the backlog for two weeks and nobody's touched it.,negative
+seed_080_30,30,ה-ticket הזה כבר two weeks ב-backlog ואף אחד לא נגע בו.,negative
+seed_080_60,60,This ticket has been ב-the backlog for two weeks ו-nobody touched it.,negative
+seed_065_0,0,המודל רץ באינפרנס עם זמן תגובה של כמה מאות מילישניות.,neutral
+seed_065_100,100,The model runs inference with a response time of a few hundred milliseconds.,neutral
+seed_065_30,30,ה-model רץ ב-inference עם response time של כמה מאות milliseconds.,neutral
+seed_065_60,60,The model runs באינפרנס with a response time of a few hundred milliseconds.,neutral

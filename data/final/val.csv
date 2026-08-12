@@ -1,0 +1,65 @@
+id,mixing_level,text,sentiment
+seed_084_0,0,"האסטימציה שלנו הייתה רחוקה מהמציאות, לקח פי שלוש מהזמן.",negative
+seed_084_100,100,Our estimation was totally off — it took three times as long.,negative
+seed_084_30,30,"ה-estimation שלנו הייתה totally off, לקח פי three מהזמן.",negative
+seed_084_60,60,"Our estimation was totally off, it took three times as long.",negative
+seed_043_0,0,"עשיתי קומיט קטן וממוקד, הכי קל להבין מה השתנה.",positive
+seed_043_100,100,"I made a small, focused commit — the easiest way to understand what changed.",positive
+seed_043_30,30,"עשיתי commit קטן וfocused, הכי easy להבין מה השתנה.",positive
+seed_043_60,60,"I made a small, focused commit, the easiest way להבין what changed.",positive
+seed_039_0,0,היעדים לרבעון הבא ייקבעו בישיבת ההנהלה בשבוע הבא.,neutral
+seed_039_100,100,The goals for next quarter will be set in the leadership meeting next week.,neutral
+seed_039_30,30,ה-goals ל-next quarter ייקבעו ב-leadership meeting בשבוע הבא.,neutral
+seed_039_60,60,The goals for the next quarter will be set ב-the leadership meeting next week.,neutral
+seed_049_0,0,הפוד קרס שוב והקלאסטר לא הצליח להרים אותו מחדש.,negative
+seed_049_100,100,The pod crashed again and the cluster couldn't bring it back up.,negative
+seed_049_30,30,ה-pod קרס again וה-cluster לא הצליח להרים אותו מחדש.,negative
+seed_049_60,60,The pod crashed again ו-the cluster couldn't bring it back up.,negative
+seed_105_0,0,הבונוס השנה היה נמוך משמעותית מהציפיות של הצוות.,negative
+seed_105_100,100,The bonus this year was significantly lower than the team's expectations.,negative
+seed_105_30,30,ה-bonus השנה היה significantly lower מ-expectations של ה-team.,negative
+seed_105_60,60,The bonus השנה was significantly lower than the team's expectations.,negative
+seed_026_0,0,סקירת הקוד עברה מהר וקיבלתי הערות ממש מועילות.,positive
+seed_026_100,100,The code review went fast and I got really helpful comments.,positive
+seed_026_30,30,ה-code review עברה fast וקיבלתי really useful comments.,positive
+seed_026_60,60,The code review went fast ו-I got really helpful comments.,positive
+seed_063_0,0,קיבלנו עשרות אלרטים בלילה ואף אחד מהם לא היה רלוונטי באמת.,negative
+seed_063_100,100,We got dozens of alerts overnight and none of them were actually relevant.,negative
+seed_063_30,30,קיבלנו dozens of alerts בלילה ואף אחד מהם לא היה really relevant.,negative
+seed_063_60,60,We got dozens of alerts בלילה ו-none of them were actually relevant.,negative
+seed_045_0,0,פתחתי ברנצ' חדש בשביל הפיצ'ר.,neutral
+seed_045_100,100,I opened a new branch for the feature.,neutral
+seed_045_30,30,פתחתי branch חדש בשביל ה-feature.,neutral
+seed_045_60,60,I opened a new branch בשביל the feature.,neutral
+seed_030_0,0,המבקר דחה את הפול ריקווסט בלי הסבר אמיתי.,negative
+seed_030_100,100,The reviewer rejected the PR without any real explanation.,negative
+seed_030_30,30,ה-reviewer דחה את ה-PR בלי real explanation.,negative
+seed_030_60,60,The reviewer rejected the PR בלי any real explanation.,negative
+seed_087_0,0,הבילד נכשל בגלל תלות שהשתנתה בלי שידענו.,negative
+seed_087_100,100,The build failed because of a dependency that changed without us knowing.,negative
+seed_087_30,30,ה-build נכשל בגלל dependency שהשתנתה בלי שידענו.,negative
+seed_087_60,60,The build failed בגלל a dependency שchanged without us knowing.,negative
+seed_095_0,0,קוברנטיס לא הצליח לתזמן את הפוד בגלל מחסור במשאבים.,negative
+seed_095_100,100,Kubernetes couldn't schedule the pod due to a lack of resources.,negative
+seed_095_30,30,kubernetes לא הצליח לתזמן את ה-pod בגלל lack ב-resources.,negative
+seed_095_60,60,Kubernetes couldn't schedule את the pod due to a lack of resources.,negative
+seed_011_0,0,סוף סוף ישיבה שבה כולם הקשיבו אחד לשני והגענו להסכמה.,positive
+seed_011_100,100,Finally a meeting where everyone actually listened to each other and we reached an agreement.,positive
+seed_011_30,30,סוף סוף meeting שבה כולם totally הקשיבו אחד לשני והגענו ל-agreement.,positive
+seed_011_60,60,Finally a meeting שבה everyone actually listened to each other ו-we reached an agreement.,positive
+seed_071_0,0,קיבלתי אופר אחרי האונסייט וזה הרגיש כמו הישג ענק.,positive
+seed_071_100,100,I got an offer after the onsite and it totally felt like a huge achievement.,positive
+seed_071_30,30,קיבלתי offer אחרי ה-onsite וזה הרגיש totally like a huge achievement.,positive
+seed_071_60,60,I got an offer אחרי the onsite ו-it totally felt like a huge achievement.,positive
+seed_009_0,0,יש לנו ישיבת סטטוס כל יום שני בבוקר.,neutral
+seed_009_100,100,We have a status meeting every Monday morning.,neutral
+seed_009_30,30,יש לנו status meeting כל יום שני בבוקר.,neutral
+seed_009_60,60,We have a status meeting כל Monday morning.,neutral
+seed_031_0,0,סגרנו את כל המשימות בספרינט וגם הקצב שלנו השתפר.,positive
+seed_031_100,100,We closed all the tasks in the sprint and our velocity totally improved.,positive
+seed_031_30,30,סגרנו את כל ה-tasks ב-sprint וגם ה-velocity שלנו totally השתפר.,positive
+seed_031_60,60,We closed all the tasks ב-sprint ו-our velocity totally improved.,positive
+seed_073_0,0,שלחתי רפרל לחבר שלי לתפקיד בצוות.,neutral
+seed_073_100,100,I sent a referral for a friend of mine for a position on the team.,neutral
+seed_073_30,30,שלחתי referral לחבר שלי ל-position ב-team.,neutral
+seed_073_60,60,I sent a referral לa friend of mine ל-a position on the team.,neutral

@@ -1,0 +1,421 @@
+id,seed_id,mixing_level,text,intended_sentiment
+seed_001_0,seed_001,0,"הדיפלוי לייצור עבר חלק, בלי שום תקלה.",positive
+seed_001_30,seed_001,30,"ה-deployment ל-production עבר חלק, totally בלי תקלות.",positive
+seed_001_60,seed_001,60,"The deployment ל-production was חלק, totally no issues.",positive
+seed_001_100,seed_001,100,"The deployment to production went smoothly, with zero issues.",positive
+seed_002_0,seed_002,0,הדיפלוי קרס באמצע הלילה ונאלצנו לעשות רולבק.,negative
+seed_002_30,seed_002,30,ה-deployment קרס באמצע הלילה ו-literally נאלצנו לעשות rollback.,negative
+seed_002_60,seed_002,60,The deployment קרס באמצע the night ו-we had to do a rollback.,negative
+seed_002_100,seed_002,100,The deployment crashed in the middle of the night and we had to do a rollback.,negative
+seed_003_0,seed_003,0,עשינו דיפלוי ביום חמישי אחר הצהריים וכולם ידעו שזה ייגמר רע.,negative
+seed_003_30,seed_003,30,"עשינו deployment ביום חמישי אחה""צ ו-basically כולם ידעו שזה ייגמר רע.",negative
+seed_003_60,seed_003,60,We did a deployment ביום חמישי afternoon ו-everyone totally knew it would end badly.,negative
+seed_003_100,seed_003,100,We deployed on Thursday afternoon and everyone knew it was going to end badly.,negative
+seed_004_0,seed_004,0,סוף סוף הצלחנו לעשות דיפלוי אוטומטי בלי התערבות ידנית.,positive
+seed_004_30,seed_004,30,"סוף סוף הצלחנו לעשות automatic deployment, totally בלי manual intervention.",positive
+seed_004_60,seed_004,60,"Finally הצלחנו to do automatic deployment, totally without manual intervention.",positive
+seed_004_100,seed_004,100,"We finally managed to get automatic deployment working, with zero manual intervention.",positive
+seed_005_0,seed_005,0,הדיפלוי הבא מתוכנן ליום שלישי בבוקר.,neutral
+seed_005_30,seed_005,30,ה-next deployment מתוכנן ליום שלישי בבוקר.,neutral
+seed_005_60,seed_005,60,The next deployment is planned ליום שלישי in the morning.,neutral
+seed_005_100,seed_005,100,The next deployment is scheduled for Tuesday morning.,neutral
+seed_006_0,seed_006,0,השעה שתיים בלילה ואנחנו עדיין מנסים להעלות את השרתים אחרי הדיפלוי.,negative
+seed_006_30,seed_006,30,השעה שתיים בלילה ואנחנו still מנסים להעלות את ה-servers אחרי ה-deployment.,negative
+seed_006_60,seed_006,60,It's 2am ואנחנו still trying להעלות the servers after the deployment.,negative
+seed_006_100,seed_006,100,It's 2am and we're still trying to bring the servers back up after the deployment.,negative
+seed_007_0,seed_007,0,הישיבה נמשכה שעתיים ולא יצא ממנה שום דבר קונקרטי.,negative
+seed_007_30,seed_007,30,ה-meeting נמשכה שעתיים ו-literally לא יצא ממנה שום דבר concrete.,negative
+seed_007_60,seed_007,60,The meeting נמשכה two hours ו-literally nothing concrete came out of it.,negative
+seed_007_100,seed_007,100,The meeting dragged on for two hours and literally nothing concrete came out of it.,negative
+seed_008_0,seed_008,0,הישיבה הפעם הייתה ממוקדת וסיימנו בזמן עם החלטות ברורות.,positive
+seed_008_30,seed_008,30,ה-meeting הפעם הייתה focused וסיימנו בזמן עם clear decisions.,positive
+seed_008_60,seed_008,60,The meeting this time was totally focused ו-we finished on time עם clear decisions.,positive
+seed_008_100,seed_008,100,The meeting this time was focused and we finished on time with clear decisions.,positive
+seed_009_0,seed_009,0,יש לנו ישיבת סטטוס כל יום שני בבוקר.,neutral
+seed_009_30,seed_009,30,יש לנו status meeting כל יום שני בבוקר.,neutral
+seed_009_60,seed_009,60,We have a status meeting כל Monday morning.,neutral
+seed_009_100,seed_009,100,We have a status meeting every Monday morning.,neutral
+seed_010_0,seed_010,0,זימנו אותי לעוד ישיבה שיכלה להיות מייל.,negative
+seed_010_30,seed_010,30,זימנו אותי לעוד meeting שיכלה literally להיות an email.,negative
+seed_010_60,seed_010,60,They invited אותי to another meeting that could literally have been an email.,negative
+seed_010_100,seed_010,100,They invited me to another meeting that could literally have been an email.,negative
+seed_011_0,seed_011,0,סוף סוף ישיבה שבה כולם הקשיבו אחד לשני והגענו להסכמה.,positive
+seed_011_30,seed_011,30,סוף סוף meeting שבה כולם totally הקשיבו אחד לשני והגענו ל-agreement.,positive
+seed_011_60,seed_011,60,Finally a meeting שבה everyone actually listened to each other ו-we reached an agreement.,positive
+seed_011_100,seed_011,100,Finally a meeting where everyone actually listened to each other and we reached an agreement.,positive
+seed_012_0,seed_012,0,הישיבה בוטלה ברגע האחרון בפעם השלישית החודש.,negative
+seed_012_30,seed_012,30,"ה-meeting בוטלה ברגע האחרון, ה-third time החודש.",negative
+seed_012_60,seed_012,60,"The meeting got canceled ברגע last minute, the third time החודש.",negative
+seed_012_100,seed_012,100,"The meeting got canceled at the last minute, for the third time this month.",negative
+seed_013_0,seed_013,0,יש לנו באג קריטי בייצור והמערכת קורסת כל כמה דקות.,negative
+seed_013_30,seed_013,30,יש לנו critical bug ב-production וה-system קורסת כל כמה minutes.,negative
+seed_013_60,seed_013,60,We have a critical bug ב-production ו-the system crashes every few minutes.,negative
+seed_013_100,seed_013,100,We have a critical bug in production and the system is crashing every few minutes.,negative
+seed_014_0,seed_014,0,מצאנו את הבאג אחרי שעתיים חיפוש ותיקנו אותו תוך רבע שעה.,positive
+seed_014_30,seed_014,30,מצאנו את ה-bug אחרי שעתיים search ותיקנו אותו תוך quarter of an hour.,positive
+seed_014_60,seed_014,60,We found the bug אחרי two hours of search ו-fixed it תוך fifteen minutes.,positive
+seed_014_100,seed_014,100,We found the bug after two hours of searching and fixed it within fifteen minutes.,positive
+seed_015_0,seed_015,0,התקרית נמשכה כל הלילה ולקוחות התלוננו בלי הפסקה.,negative
+seed_015_30,seed_015,30,ה-incident נמשכה כל הלילה ו-customers התלוננו totally בלי הפסקה.,negative
+seed_015_60,seed_015,60,The incident נמשכה all night ו-customers were complaining non-stop.,negative
+seed_015_100,seed_015,100,The incident dragged on all night and customers were complaining non-stop.,negative
+seed_016_0,seed_016,0,התקלה נפתרה מהר בזכות הצוות שהגיב תוך דקות.,positive
+seed_016_30,seed_016,30,ה-issue נפתרה fast בזכות ה-team שהגיב תוך minutes.,positive
+seed_016_60,seed_016,60,The issue was resolved fast thanks to the team שreacted תוך minutes.,positive
+seed_016_100,seed_016,100,"The issue was resolved fast thanks to the team, which reacted within minutes.",positive
+seed_017_0,seed_017,0,אנחנו חוקרים את הסיבה לתקרית מאתמול.,neutral
+seed_017_30,seed_017,30,אנחנו investigating את הסיבה ל-incident מאתמול.,neutral
+seed_017_60,seed_017,60,We're investigating את the root cause of yesterday's incident.,neutral
+seed_017_100,seed_017,100,We're investigating the root cause of yesterday's incident.,neutral
+seed_018_0,seed_018,0,זו כבר התקרית השלישית השבוע באותו רכיב בדיוק.,negative
+seed_018_30,seed_018,30,זו כבר ה-third incident השבוע באותו component בדיוק.,negative
+seed_018_60,seed_018,60,This is already the third incident השבוע on the exact same component.,negative
+seed_018_100,seed_018,100,This is already the third incident this week on the exact same component.,negative
+seed_019_0,seed_019,0,"הקליטה של העובד החדש הלכה ממש חלק, הוא כבר תרם קוד ביום השלישי.",positive
+seed_019_30,seed_019,30,"ה-onboarding של ה-new employee הלכה totally חלק, הוא כבר contributed code ביום השלישי.",positive
+seed_019_60,seed_019,60,"The onboarding של the new employee went totally smoothly, he already contributed code ביום שלישי.",positive
+seed_019_100,seed_019,100,The new employee's onboarding went totally smoothly — he already contributed code by day three.,positive
+seed_020_0,seed_020,0,אף אחד לא הכין לו סביבת עבודה והוא ישב בלי גישה יומיים שלמים.,negative
+seed_020_30,seed_020,30,אף אחד לא הכין לו dev environment והוא ישב בלי access יומיים שלמים.,negative
+seed_020_60,seed_020,60,Nobody set up his dev environment ו-he sat without access for two full days.,negative
+seed_020_100,seed_020,100,Nobody set up his dev environment and he sat without access for two full days.,negative
+seed_021_0,seed_021,0,העובד החדש מתחיל השבוע ויעבור הדרכה עם הצוות.,neutral
+seed_021_30,seed_021,30,ה-new employee מתחיל השבוע ויעבור training עם ה-team.,neutral
+seed_021_60,seed_021,60,The new employee starts השבוע and will go through training עם the team.,neutral
+seed_021_100,seed_021,100,The new employee starts this week and will go through training with the team.,neutral
+seed_022_0,seed_022,0,היא התאקלמה מהר מאוד והרגישה חלק מהצוות כבר בשבוע הראשון.,positive
+seed_022_30,seed_022,30,היא התאקלמה super fast והרגישה totally part מה-team כבר בשבוע הראשון.,positive
+seed_022_60,seed_022,60,She adjusted super fast ו-felt totally part of the team כבר in the first week.,positive
+seed_022_100,seed_022,100,She adjusted super fast and felt totally part of the team already in the first week.,positive
+seed_023_0,seed_023,0,"תהליך הקליטה שלנו מבולגן, כל אחד מסביר לו משהו אחר.",negative
+seed_023_30,seed_023,30,"ה-onboarding process שלנו totally מבולגן, כל אחד מסביר לו משהו אחר.",negative
+seed_023_60,seed_023,60,"Our onboarding process is totally messy, everyone explains לו something different.",negative
+seed_023_100,seed_023,100,Our onboarding process is totally messy — everyone explains something different to him.,negative
+seed_024_0,seed_024,0,בזכות המנטור הוא כבר הבין את כל הארכיטקטורה תוך שבוע.,positive
+seed_024_30,seed_024,30,בזכות ה-mentor הוא כבר הבין את כל ה-architecture תוך week.,positive
+seed_024_60,seed_024,60,Thanks to the mentor he already understood the whole architecture תוך a week.,positive
+seed_024_100,seed_024,100,"Thanks to the mentor, he already understood the whole architecture within a week.",positive
+seed_025_0,seed_025,0,הפול ריקווסט קיבל עשרים הערות והמבקר לא היה מרוצה משום דבר.,negative
+seed_025_30,seed_025,30,ה-PR קיבל twenty comments וה-reviewer לא היה satisfied משום דבר.,negative
+seed_025_60,seed_025,60,The PR got twenty comments ו-the reviewer wasn't satisfied with anything.,negative
+seed_025_100,seed_025,100,The PR got twenty comments and the reviewer wasn't satisfied with anything.,negative
+seed_026_0,seed_026,0,סקירת הקוד עברה מהר וקיבלתי הערות ממש מועילות.,positive
+seed_026_30,seed_026,30,ה-code review עברה fast וקיבלתי really useful comments.,positive
+seed_026_60,seed_026,60,The code review went fast ו-I got really helpful comments.,positive
+seed_026_100,seed_026,100,The code review went fast and I got really helpful comments.,positive
+seed_027_0,seed_027,0,הקוד ממתין לסקירה כבר יומיים.,neutral
+seed_027_30,seed_027,30,ה-code ממתין ל-review כבר two days.,neutral
+seed_027_60,seed_027,60,The code has been waiting ל-review כבר two days.,neutral
+seed_027_100,seed_027,100,The code has been waiting for review for two days already.,neutral
+seed_028_0,seed_028,0,"אף אחד לא בדק את הקוד שלי כבר שבוע, זה תקוע.",negative
+seed_028_30,seed_028,30,"אף אחד לא בדק את ה-code שלי כבר week, זה totally תקוע.",negative
+seed_028_60,seed_028,60,"Nobody checked my code כבר a week, it's totally stuck.",negative
+seed_028_100,seed_028,100,"Nobody has checked my code for a week already, it's totally stuck.",negative
+seed_029_0,seed_029,0,ההערות בסקירה עזרו לי לראות בעיה שלא הייתי שם לב אליה.,positive
+seed_029_30,seed_029,30,ה-comments ב-review עזרו לי לראות issue שלא הייתי שם לב אליה.,positive
+seed_029_60,seed_029,60,The comments in the review helped me see an issue שI wouldn't have noticed.,positive
+seed_029_100,seed_029,100,The comments in the review helped me see an issue I wouldn't have noticed otherwise.,positive
+seed_030_0,seed_030,0,המבקר דחה את הפול ריקווסט בלי הסבר אמיתי.,negative
+seed_030_30,seed_030,30,ה-reviewer דחה את ה-PR בלי real explanation.,negative
+seed_030_60,seed_030,60,The reviewer rejected the PR בלי any real explanation.,negative
+seed_030_100,seed_030,100,The reviewer rejected the PR without any real explanation.,negative
+seed_031_0,seed_031,0,סגרנו את כל המשימות בספרינט וגם הקצב שלנו השתפר.,positive
+seed_031_30,seed_031,30,סגרנו את כל ה-tasks ב-sprint וגם ה-velocity שלנו totally השתפר.,positive
+seed_031_60,seed_031,60,We closed all the tasks ב-sprint ו-our velocity totally improved.,positive
+seed_031_100,seed_031,100,We closed all the tasks in the sprint and our velocity totally improved.,positive
+seed_032_0,seed_032,0,לא הצלחנו לסגור אפילו חצי מהמשימות שתכננו בספרינט.,negative
+seed_032_30,seed_032,30,לא הצלחנו לסגור אפילו half מה-tasks שתכננו ב-sprint.,negative
+seed_032_60,seed_032,60,We didn't manage to close even half of the tasks שwe planned ב-sprint.,negative
+seed_032_100,seed_032,100,We didn't manage to close even half the tasks we planned for the sprint.,negative
+seed_033_0,seed_033,0,הספרינט הבא מתחיל ביום ראשון ונמשך שבועיים.,neutral
+seed_033_30,seed_033,30,ה-next sprint מתחיל ביום ראשון ונמשך two weeks.,neutral
+seed_033_60,seed_033,60,The next sprint starts ביום ראשון and lasts two weeks.,neutral
+seed_033_100,seed_033,100,The next sprint starts on Sunday and lasts two weeks.,neutral
+seed_034_0,seed_034,0,הצוות עבד ממש טוב יחד והקצב היה הכי גבוה שהיה לנו.,positive
+seed_034_30,seed_034,30,ה-team עבד really well יחד וה-velocity היה ה-highest שהיה לנו.,positive
+seed_034_60,seed_034,60,The team worked really well together ו-the velocity was the highest שwe've had.,positive
+seed_034_100,seed_034,100,The team worked really well together and the velocity was the highest we've had.,positive
+seed_035_0,seed_035,0,כל ספרינט אנחנו מתכננים יותר ממה שאנחנו באמת מספיקים.,negative
+seed_035_30,seed_035,30,כל sprint אנחנו מתכננים more ממה שאנחנו really מספיקים.,negative
+seed_035_60,seed_035,60,Every sprint we plan יותר than what אנחנו actually get done.,negative
+seed_035_100,seed_035,100,Every sprint we plan more than what we actually manage to finish.,negative
+seed_036_0,seed_036,0,אספנו את כל המשימות הפתוחות לספרינט הבא.,neutral
+seed_036_30,seed_036,30,אספנו את כל ה-open tasks ל-next sprint.,neutral
+seed_036_60,seed_036,60,We collected all the open tasks ל-the next sprint.,neutral
+seed_036_100,seed_036,100,We collected all the open tasks for the next sprint.,neutral
+seed_037_0,seed_037,0,"הצוות עמד ביעדים השנה, כולם ממש גאים בהישג.",positive
+seed_037_30,seed_037,30,"ה-team עמד ב-OKRs השנה, כולם totally גאים ב-achievement.",positive
+seed_037_60,seed_037,60,"The team hit the goals השנה, everyone is totally proud of the achievement.",positive
+seed_037_100,seed_037,100,"The team hit its goals this year, everyone is totally proud of the achievement.",positive
+seed_038_0,seed_038,0,לא עמדנו באף אחד מהיעדים הרבעוניים והמנהלים לא מרוצים.,negative
+seed_038_30,seed_038,30,לא עמדנו באף אחד מה-quarterly goals וה-managers לא satisfied.,negative
+seed_038_60,seed_038,60,We didn't hit any of the quarterly goals ו-the managers aren't satisfied.,negative
+seed_038_100,seed_038,100,We didn't hit any of the quarterly goals and the managers aren't satisfied.,negative
+seed_039_0,seed_039,0,היעדים לרבעון הבא ייקבעו בישיבת ההנהלה בשבוע הבא.,neutral
+seed_039_30,seed_039,30,ה-goals ל-next quarter ייקבעו ב-leadership meeting בשבוע הבא.,neutral
+seed_039_60,seed_039,60,The goals for the next quarter will be set ב-the leadership meeting next week.,neutral
+seed_039_100,seed_039,100,The goals for next quarter will be set in the leadership meeting next week.,neutral
+seed_040_0,seed_040,0,"היעד המרכזי הושג מוקדם מהצפוי, זה הישג ממש יפה.",positive
+seed_040_30,seed_040,30,"ה-main goal הושג earlier מהצפוי, זה really nice achievement.",positive
+seed_040_60,seed_040,60,"The main goal was achieved earlier מ-expected, that's a really nice achievement.",positive
+seed_040_100,seed_040,100,"The main goal was achieved earlier than expected, that's a really nice achievement.",positive
+seed_041_0,seed_041,0,היעדים שהוגדרו היו לא ריאליים מלכתחילה.,negative
+seed_041_30,seed_041,30,ה-goals שהוגדרו היו totally unrealistic מלכתחילה.,negative
+seed_041_60,seed_041,60,The goals שwere set were totally unrealistic from the start.,negative
+seed_041_100,seed_041,100,The goals that were set were totally unrealistic from the start.,negative
+seed_042_0,seed_042,0,עדכנו את היעדים באמצע הרבעון בעקבות שינוי בעדיפויות.,neutral
+seed_042_30,seed_042,30,עדכנו את ה-goals באמצע ה-quarter בעקבות change בעדיפויות.,neutral
+seed_042_60,seed_042,60,We updated the goals באמצע the quarter following a change בpriorities.,neutral
+seed_042_100,seed_042,100,We updated the goals mid-quarter following a change in priorities.,neutral
+seed_043_0,seed_043,0,"עשיתי קומיט קטן וממוקד, הכי קל להבין מה השתנה.",positive
+seed_043_30,seed_043,30,"עשיתי commit קטן וfocused, הכי easy להבין מה השתנה.",positive
+seed_043_60,seed_043,60,"I made a small, focused commit, the easiest way להבין what changed.",positive
+seed_043_100,seed_043,100,"I made a small, focused commit — the easiest way to understand what changed.",positive
+seed_044_0,seed_044,0,הריבייס יצא ממש מסובך ונתקענו איתו כל הבוקר.,negative
+seed_044_30,seed_044,30,ה-rebase יצא really complicated ונתקענו איתו כל ה-morning.,negative
+seed_044_60,seed_044,60,The rebase turned out really complicated ו-we got stuck with it all morning.,negative
+seed_044_100,seed_044,100,The rebase turned out really complicated and we got stuck with it all morning.,negative
+seed_045_0,seed_045,0,פתחתי ברנצ' חדש בשביל הפיצ'ר.,neutral
+seed_045_30,seed_045,30,פתחתי branch חדש בשביל ה-feature.,neutral
+seed_045_60,seed_045,60,I opened a new branch בשביל the feature.,neutral
+seed_045_100,seed_045,100,I opened a new branch for the feature.,neutral
+seed_046_0,seed_046,0,ניסיתי לעשות פוש ונתקלתי בקונפליקטים בכל קובץ.,negative
+seed_046_30,seed_046,30,ניסיתי לעשות push ונתקלתי ב-conflicts בכל file.,negative
+seed_046_60,seed_046,60,I tried to push ו-ran into conflicts בevery file.,negative
+seed_046_100,seed_046,100,I tried to push and ran into conflicts in every file.,negative
+seed_047_0,seed_047,0,המרג' עבר חלק בלי שום קונפליקט.,positive
+seed_047_30,seed_047,30,ה-merge עבר smoothly בלי שום conflict.,positive
+seed_047_60,seed_047,60,The merge went smoothly בלי any conflict.,positive
+seed_047_100,seed_047,100,The merge went smoothly without any conflict.,positive
+seed_048_0,seed_048,0,מישהו דחף ישר לברנצ' הראשי בלי לעשות פול ריקווסט.,negative
+seed_048_30,seed_048,30,מישהו pushed ישר ל-main branch בלי לעשות PR.,negative
+seed_048_60,seed_048,60,Someone pushed straight ל-the main branch without doing a PR.,negative
+seed_048_100,seed_048,100,Someone pushed straight to the main branch without doing a PR.,negative
+seed_049_0,seed_049,0,הפוד קרס שוב והקלאסטר לא הצליח להרים אותו מחדש.,negative
+seed_049_30,seed_049,30,ה-pod קרס again וה-cluster לא הצליח להרים אותו מחדש.,negative
+seed_049_60,seed_049,60,The pod crashed again ו-the cluster couldn't bring it back up.,negative
+seed_049_100,seed_049,100,The pod crashed again and the cluster couldn't bring it back up.,negative
+seed_050_0,seed_050,0,המעבר למיקרוסרביסים הפחית משמעותית את הזמן שלוקח לשחרר פיצ'ר.,positive
+seed_050_30,seed_050,30,ה-move ל-microservices הפחית significantly את הזמן שלוקח לשחרר feature.,positive
+seed_050_60,seed_050,60,The move to microservices significantly reduced את the time it takes to ship a feature.,positive
+seed_050_100,seed_050,100,The move to microservices significantly reduced the time it takes to ship a feature.,positive
+seed_051_0,seed_051,0,האנדפוינט החדש עולה בסוף השבוע.,neutral
+seed_051_30,seed_051,30,ה-new endpoint עולה בסוף ה-week.,neutral
+seed_051_60,seed_051,60,The new endpoint is going live בסוף the week.,neutral
+seed_051_100,seed_051,100,The new endpoint is going live at the end of the week.,neutral
+seed_052_0,seed_052,0,הלואד באלאנסר לא חילק את התעבורה נכון והשרת אחד קרס מעומס.,negative
+seed_052_30,seed_052,30,ה-load balancer לא חילק את ה-traffic נכון והשרת אחד קרס מ-overload.,negative
+seed_052_60,seed_052,60,The load balancer didn't distribute את the traffic correctly ו-one server crashed from overload.,negative
+seed_052_100,seed_052,100,The load balancer didn't distribute the traffic correctly and one server crashed from overload.,negative
+seed_053_0,seed_053,0,הוספנו קאש וזמן התגובה של הקליינט ירד דרמטית.,positive
+seed_053_30,seed_053,30,הוספנו cache וזמן ה-response של ה-client ירד dramatically.,positive
+seed_053_60,seed_053,60,We added a cache ו-the client's response time dropped dramatically.,positive
+seed_053_100,seed_053,100,We added a cache and the client's response time dropped dramatically.,positive
+seed_054_0,seed_054,0,הדוקר לא עלה על הנוד החדש בגלל בעיית קונפיגורציה.,negative
+seed_054_30,seed_054,30,ה-docker לא עלה על ה-new node בגלל configuration issue.,negative
+seed_054_60,seed_054,60,The docker container didn't come up ה-new node due to a configuration issue.,negative
+seed_054_100,seed_054,100,The docker container didn't come up on the new node due to a configuration issue.,negative
+seed_055_0,seed_055,0,המיגרציה נכשלה באמצע והשארנו את הדאטהבייס במצב לא עקבי.,negative
+seed_055_30,seed_055,30,ה-migration נכשלה באמצע והשארנו את ה-database במצב inconsistent.,negative
+seed_055_60,seed_055,60,The migration failed באמצע ו-we left the database in an inconsistent state.,negative
+seed_055_100,seed_055,100,The migration failed halfway through and we left the database in an inconsistent state.,negative
+seed_056_0,seed_056,0,הוספנו אינדקס לטבלה והקוורי שהיה איטי הפך למהיר פי עשר.,positive
+seed_056_30,seed_056,30,הוספנו index ל-table וה-query שהיה slow הפך למהיר פי ten.,positive
+seed_056_60,seed_056,60,We added an index ל-the table ו-the slow query became ten times faster.,positive
+seed_056_100,seed_056,100,We added an index to the table and the slow query became ten times faster.,positive
+seed_057_0,seed_057,0,אנחנו מריצים בקאפ לדאטהבייס כל לילה.,neutral
+seed_057_30,seed_057,30,אנחנו מריצים backup ל-database כל night.,neutral
+seed_057_60,seed_057,60,We run a backup ל-the database כל night.,neutral
+seed_057_100,seed_057,100,We run a backup of the database every night.,neutral
+seed_058_0,seed_058,0,השאילתה הזאת סורקת את כל הטייבל וזה הורג את הביצועים.,negative
+seed_058_30,seed_058,30,ה-query הזאת סורקת את כל ה-table וזה totally הורג את ה-performance.,negative
+seed_058_60,seed_058,60,This query scans את the whole table ו-it's totally killing performance.,negative
+seed_058_100,seed_058,100,This query scans the whole table and it's totally killing performance.,negative
+seed_059_0,seed_059,0,עדכנו את הסכמה בלי לשבור אף שירות קיים.,positive
+seed_059_30,seed_059,30,עדכנו את ה-schema בלי לשבור אף existing service.,positive
+seed_059_60,seed_059,60,We updated the schema בלי breaking any existing service.,positive
+seed_059_100,seed_059,100,We updated the schema without breaking any existing service.,positive
+seed_060_0,seed_060,0,הפייפליין נשבר בגלל שינוי קטן וכל הצוות נתקע בלי יכולת לשחרר קוד.,negative
+seed_060_30,seed_060,30,ה-pipeline נשבר בגלל small change וכל ה-team נתקע בלי יכולת לשחרר code.,negative
+seed_060_60,seed_060,60,The pipeline broke בגלל a small change ו-the whole team got stuck unable to ship code.,negative
+seed_060_100,seed_060,100,"The pipeline broke because of a small change and the whole team got stuck, unable to ship code.",negative
+seed_061_0,seed_061,0,הוספנו מוניטורינג ומטריקות וכל בעיה נתפסת הרבה לפני שהיא מגיעה ללקוחות.,positive
+seed_061_30,seed_061,30,הוספנו monitoring ו-metrics וכל issue נתפסת much earlier לפני שהיא מגיעה ל-customers.,positive
+seed_061_60,seed_061,60,We added monitoring and metrics ו-every issue gets caught much earlier before it reaches customers.,positive
+seed_061_100,seed_061,100,"We added monitoring and metrics and every issue gets caught much earlier, before it reaches customers.",positive
+seed_062_0,seed_062,0,יש לנו דשבורד שמציג את כל המטריקות של האינפרה.,neutral
+seed_062_30,seed_062,30,יש לנו dashboard שמציג את כל ה-metrics של ה-infra.,neutral
+seed_062_60,seed_062,60,We have a dashboard שshows all the metrics of the infra.,neutral
+seed_062_100,seed_062,100,We have a dashboard that shows all the infra metrics.,neutral
+seed_063_0,seed_063,0,קיבלנו עשרות אלרטים בלילה ואף אחד מהם לא היה רלוונטי באמת.,negative
+seed_063_30,seed_063,30,קיבלנו dozens of alerts בלילה ואף אחד מהם לא היה really relevant.,negative
+seed_063_60,seed_063,60,We got dozens of alerts בלילה ו-none of them were actually relevant.,negative
+seed_063_100,seed_063,100,We got dozens of alerts overnight and none of them were actually relevant.,negative
+seed_064_0,seed_064,0,הטרייס עזר לנו לאתר בדיוק איפה הבקשה נתקעת.,positive
+seed_064_30,seed_064,30,ה-trace עזר לנו לאתר exactly איפה ה-request נתקעת.,positive
+seed_064_60,seed_064,60,The trace helped us לאתר exactly where the request gets stuck.,positive
+seed_064_100,seed_064,100,The trace helped us pinpoint exactly where the request gets stuck.,positive
+seed_065_0,seed_065,0,המודל רץ באינפרנס עם זמן תגובה של כמה מאות מילישניות.,neutral
+seed_065_30,seed_065,30,ה-model רץ ב-inference עם response time של כמה מאות milliseconds.,neutral
+seed_065_60,seed_065,60,The model runs באינפרנס with a response time of a few hundred milliseconds.,neutral
+seed_065_100,seed_065,100,The model runs inference with a response time of a few hundred milliseconds.,neutral
+seed_066_0,seed_066,0,אחרי הפיין-טיונינג המודל נתן תשובות הרבה יותר מדויקות.,positive
+seed_066_30,seed_066,30,אחרי ה-fine-tuning ה-model נתן answers הרבה יותר accurate.,positive
+seed_066_60,seed_066,60,After fine-tuning the model gave answers שwere much more accurate.,positive
+seed_066_100,seed_066,100,"After fine-tuning, the model gave answers that were much more accurate.",positive
+seed_067_0,seed_067,0,הפרומפט לא עבד טוב והמודל החזיר תשובות לא רלוונטיות.,negative
+seed_067_30,seed_067,30,ה-prompt לא עבד well וה-model החזיר irrelevant answers.,negative
+seed_067_60,seed_067,60,The prompt didn't work well ו-the model returned irrelevant answers.,negative
+seed_067_100,seed_067,100,The prompt didn't work well and the model returned irrelevant answers.,negative
+seed_068_0,seed_068,0,האמבדינגים לא הצליחו להפריד בין המשפטים בצורה ברורה.,negative
+seed_068_30,seed_068,30,ה-embeddings לא הצליחו להפריד בין ה-sentences בצורה clear.,negative
+seed_068_60,seed_068,60,The embeddings didn't manage להפריד between the sentences clearly.,negative
+seed_068_100,seed_068,100,The embeddings didn't manage to separate the sentences clearly.,negative
+seed_069_0,seed_069,0,הוספנו שכבת אחזור מידע עם וקטור דאטהבייס והתשובות הפכו הרבה יותר מדויקות.,positive
+seed_069_30,seed_069,30,הוספנו retrieval layer עם vector database והתשובות הפכו הרבה יותר accurate.,positive
+seed_069_60,seed_069,60,We added a retrieval layer עם a vector database ו-the answers became much more accurate.,positive
+seed_069_100,seed_069,100,We added a retrieval layer with a vector database and the answers became much more accurate.,positive
+seed_070_0,seed_070,0,האייג'נט משתמש בכלים חיצוניים כדי להשלים את המשימה.,neutral
+seed_070_30,seed_070,30,ה-agent משתמש ב-external tools כדי להשלים את ה-task.,neutral
+seed_070_60,seed_070,60,The agent uses external tools כדי to complete the task.,neutral
+seed_070_100,seed_070,100,The agent uses external tools to complete the task.,neutral
+seed_071_0,seed_071,0,קיבלתי אופר אחרי האונסייט וזה הרגיש כמו הישג ענק.,positive
+seed_071_30,seed_071,30,קיבלתי offer אחרי ה-onsite וזה הרגיש totally like a huge achievement.,positive
+seed_071_60,seed_071,60,I got an offer אחרי the onsite ו-it totally felt like a huge achievement.,positive
+seed_071_100,seed_071,100,I got an offer after the onsite and it totally felt like a huge achievement.,positive
+seed_072_0,seed_072,0,הסקרינינג הראשון היה ממש לא מאורגן ולקח שבועיים לקבל תשובה.,negative
+seed_072_30,seed_072,30,ה-first screening היה really unorganized ולקח two weeks לקבל answer.,negative
+seed_072_60,seed_072,60,The first screening was really unorganized ו-it took two weeks to get an answer.,negative
+seed_072_100,seed_072,100,The first screening was really unorganized and it took two weeks to get an answer.,negative
+seed_073_0,seed_073,0,שלחתי רפרל לחבר שלי לתפקיד בצוות.,neutral
+seed_073_30,seed_073,30,שלחתי referral לחבר שלי ל-position ב-team.,neutral
+seed_073_60,seed_073,60,I sent a referral לa friend of mine ל-a position on the team.,neutral
+seed_073_100,seed_073,100,I sent a referral for a friend of mine for a position on the team.,neutral
+seed_074_0,seed_074,0,קיבלתי פרומושן ללבל הבא אחרי שנה של עבודה קשה.,positive
+seed_074_30,seed_074,30,קיבלתי promotion ל-next level אחרי year של hard work.,positive
+seed_074_60,seed_074,60,I got a promotion to the next level אחרי a year of hard work.,positive
+seed_074_100,seed_074,100,I got a promotion to the next level after a year of hard work.,positive
+seed_075_0,seed_075,0,הפידבק שקיבלתי היה כללי מדי ולא עזר לי להבין מה לשפר.,negative
+seed_075_30,seed_075,30,ה-feedback שקיבלתי היה too generic ולא עזר לי להבין מה לשפר.,negative
+seed_075_60,seed_075,60,The feedback I got was too generic ולא helped me understand what to improve.,negative
+seed_075_100,seed_075,100,The feedback I got was too generic and didn't help me understand what to improve.,negative
+seed_076_0,seed_076,0,יש לנו בלוקר שמונע מאיתנו להתקדם כבר יומיים.,negative
+seed_076_30,seed_076,30,יש לנו blocker שמונע מאיתנו להתקדם כבר two days.,negative
+seed_076_60,seed_076,60,We have a blocker שpreventing us from moving forward for two days already.,negative
+seed_076_100,seed_076,100,We have a blocker that's been preventing us from moving forward for two days already.,negative
+seed_077_0,seed_077,0,הדדליין הזה לא ריאלי מלכתחילה ולא נספיק.,negative
+seed_077_30,seed_077,30,ה-deadline הזה totally unrealistic מלכתחילה ולא נספיק.,negative
+seed_077_60,seed_077,60,This deadline is totally unrealistic from the start ו-we're not going to make it.,negative
+seed_077_100,seed_077,100,This deadline is totally unrealistic from the start and we're not going to make it.,negative
+seed_078_0,seed_078,0,בוא נעשה סינק קצר לפני הישיבה.,neutral
+seed_078_30,seed_078,30,בוא נעשה sync קצר לפני ה-meeting.,neutral
+seed_078_60,seed_078,60,Let's do a quick sync לפני the meeting.,neutral
+seed_078_100,seed_078,100,Let's do a quick sync before the meeting.,neutral
+seed_079_0,seed_079,0,תן לי אפדייט על הטיקט הזה.,neutral
+seed_079_30,seed_079,30,תן לי update על ה-ticket הזה.,neutral
+seed_079_60,seed_079,60,Give me an update על this ticket.,neutral
+seed_079_100,seed_079,100,Give me an update on this ticket.,neutral
+seed_080_0,seed_080,0,הטיקט הזה כבר שבועיים בבקלוג ואף אחד לא נגע בו.,negative
+seed_080_30,seed_080,30,ה-ticket הזה כבר two weeks ב-backlog ואף אחד לא נגע בו.,negative
+seed_080_60,seed_080,60,This ticket has been ב-the backlog for two weeks ו-nobody touched it.,negative
+seed_080_100,seed_080,100,This ticket has been sitting in the backlog for two weeks and nobody's touched it.,negative
+seed_081_0,seed_081,0,"הרטרו הפעם היה כן ופתוח, כולם העלו נקודות אמיתיות.",positive
+seed_081_30,seed_081,30,"ה-retro הפעם היה totally honest ו-open, כולם raised real points.",positive
+seed_081_60,seed_081,60,"The retro הפעם was totally honest and open, everyone raised real points.",positive
+seed_081_100,seed_081,100,"The retro this time was totally honest and open, everyone raised real points.",positive
+seed_082_0,seed_082,0,"הסטנדאפ היה קצר וממוקד, בדיוק כמו שצריך.",positive
+seed_082_30,seed_082,30,"ה-standup היה short וfocused, exactly כמו שצריך.",positive
+seed_082_60,seed_082,60,"The standup was short and focused, exactly like it should be.",positive
+seed_082_100,seed_082,100,"The standup was short and focused, exactly the way it should be.",positive
+seed_083_0,seed_083,0,הגרומינג נמשך שעה שלמה על טיקט אחד קטן.,negative
+seed_083_30,seed_083,30,ה-grooming נמשך a whole hour על ticket אחד קטן.,negative
+seed_083_60,seed_083,60,The grooming session went on for a whole hour על one small ticket.,negative
+seed_083_100,seed_083,100,The grooming session went on for a whole hour over one small ticket.,negative
+seed_084_0,seed_084,0,"האסטימציה שלנו הייתה רחוקה מהמציאות, לקח פי שלוש מהזמן.",negative
+seed_084_30,seed_084,30,"ה-estimation שלנו הייתה totally off, לקח פי three מהזמן.",negative
+seed_084_60,seed_084,60,"Our estimation was totally off, it took three times as long.",negative
+seed_084_100,seed_084,100,Our estimation was totally off — it took three times as long.,negative
+seed_085_0,seed_085,0,"האונר של הטיקט הזה לא ברור, כל אחד חושב שזה מישהו אחר.",negative
+seed_085_30,seed_085,30,"ה-owner של ה-ticket הזה לא clear, כל אחד חושב שזה מישהו אחר.",negative
+seed_085_60,seed_085,60,"The owner של this ticket isn't clear, everyone thinks it's someone else.",negative
+seed_085_100,seed_085,100,"The owner of this ticket isn't clear, everyone thinks it's someone else.",negative
+seed_086_0,seed_086,0,העליתי את הריפו לגישה של כל הצוות.,neutral
+seed_086_30,seed_086,30,העליתי את ה-repo ל-access של כל ה-team.,neutral
+seed_086_60,seed_086,60,I uploaded the repo לaccess by the whole team.,neutral
+seed_086_100,seed_086,100,I made the repo accessible to the whole team.,neutral
+seed_087_0,seed_087,0,הבילד נכשל בגלל תלות שהשתנתה בלי שידענו.,negative
+seed_087_30,seed_087,30,ה-build נכשל בגלל dependency שהשתנתה בלי שידענו.,negative
+seed_087_60,seed_087,60,The build failed בגלל a dependency שchanged without us knowing.,negative
+seed_087_100,seed_087,100,The build failed because of a dependency that changed without us knowing.,negative
+seed_088_0,seed_088,0,הריליס יצא בזמן ובלי אף באג ידוע.,positive
+seed_088_30,seed_088,30,ה-release יצא on time ובלי אף known bug.,positive
+seed_088_60,seed_088,60,The release went out on time ובלי any known bug.,positive
+seed_088_100,seed_088,100,The release went out on time and without any known bugs.,positive
+seed_089_0,seed_089,0,עשיתי פיקס מהיר לבאג הקריטי תוך עשר דקות.,positive
+seed_089_30,seed_089,30,עשיתי fix fast ל-critical bug תוך ten minutes.,positive
+seed_089_60,seed_089,60,I did a quick fix ל-the critical bug תוך ten minutes.,positive
+seed_089_100,seed_089,100,I did a quick fix for the critical bug within ten minutes.,positive
+seed_090_0,seed_090,0,שחררנו פאץ' קטן לתיקון הבעיה מאתמול.,neutral
+seed_090_30,seed_090,30,שחררנו patch קטן ל-fix ה-issue מאתמול.,neutral
+seed_090_60,seed_090,60,We released a small patch ל-fix yesterday's issue.,neutral
+seed_090_100,seed_090,100,We released a small patch to fix yesterday's issue.,neutral
+seed_091_0,seed_091,0,הריפקטור לקח הרבה יותר זמן ממה שתכננו וכמעט שבר הכול.,negative
+seed_091_30,seed_091,30,ה-refactor לקח much more time ממה שתכננו וכמעט שבר everything.,negative
+seed_091_60,seed_091,60,The refactor took much more time than we planned ו-it almost broke everything.,negative
+seed_091_100,seed_091,100,The refactor took much more time than we planned and it almost broke everything.,negative
+seed_092_0,seed_092,0,בזבזתי את כל הבוקר בדיבאג של בעיה שהתבררה כטריוויאלית.,negative
+seed_092_30,seed_092,30,בזבזתי את כל ה-morning ב-debug של issue שהתבררה כtrivial.,negative
+seed_092_60,seed_092,60,I wasted the whole morning debugging an issue שturned out to be trivial.,negative
+seed_092_100,seed_092,100,I wasted the whole morning debugging an issue that turned out to be trivial.,negative
+seed_093_0,seed_093,0,בוא נבדוק את הלוגים לפני שנסיק מסקנות.,neutral
+seed_093_30,seed_093,30,בוא נבדוק את ה-logs לפני שנסיק conclusions.,neutral
+seed_093_60,seed_093,60,Let's check the logs לפני we jump to conclusions.,neutral
+seed_093_100,seed_093,100,Let's check the logs before we jump to conclusions.,neutral
+seed_094_0,seed_094,0,הקמנו קונטיינר נפרד לכל שירות וזה הקל מאוד על הפריסה.,positive
+seed_094_30,seed_094,30,הקמנו container נפרד לכל service וזה הקל very much על ה-deployment.,positive
+seed_094_60,seed_094,60,We set up a separate container לeach service ו-it made the deployment much easier.,positive
+seed_094_100,seed_094,100,We set up a separate container for each service and it made deployment much easier.,positive
+seed_095_0,seed_095,0,קוברנטיס לא הצליח לתזמן את הפוד בגלל מחסור במשאבים.,negative
+seed_095_30,seed_095,30,kubernetes לא הצליח לתזמן את ה-pod בגלל lack ב-resources.,negative
+seed_095_60,seed_095,60,Kubernetes couldn't schedule את the pod due to a lack of resources.,negative
+seed_095_100,seed_095,100,Kubernetes couldn't schedule the pod due to a lack of resources.,negative
+seed_096_0,seed_096,0,הוספנו נוד חדש לקלאסטר וזה פתר את בעיית העומס לגמרי.,positive
+seed_096_30,seed_096,30,הוספנו node חדש ל-cluster וזה פתר את ה-load issue totally.,positive
+seed_096_60,seed_096,60,We added a new node ל-the cluster ו-it totally solved the load issue.,positive
+seed_096_100,seed_096,100,We added a new node to the cluster and it totally solved the load issue.,positive
+seed_097_0,seed_097,0,הסרבר נפל בשעת שיא והמון משתמשים לא הצליחו להתחבר.,negative
+seed_097_30,seed_097,30,ה-server נפל בשעת peak והמון users לא הצליחו להתחבר.,negative
+seed_097_60,seed_097,60,The server went down בpeak hours ו-a ton of users couldn't connect.,negative
+seed_097_100,seed_097,100,The server went down during peak hours and a ton of users couldn't connect.,negative
+seed_098_0,seed_098,0,הגייטוויי מנתב את כל הבקשות לשירותים הפנימיים.,neutral
+seed_098_30,seed_098,30,ה-gateway מנתב את כל ה-requests ל-internal services.,neutral
+seed_098_60,seed_098,60,The gateway routes all the requests לthe internal services.,neutral
+seed_098_100,seed_098,100,The gateway routes all the requests to the internal services.,neutral
+seed_099_0,seed_099,0,יש לנו לטנסי גבוהה בבקשות והלקוחות מתלוננים.,negative
+seed_099_30,seed_099,30,יש לנו high latency ב-requests וה-customers מתלוננים.,negative
+seed_099_60,seed_099,60,We have high latency ב-requests ו-customers are complaining.,negative
+seed_099_100,seed_099,100,We have high latency on requests and customers are complaining.,negative
+seed_100_0,seed_100,0,הפתרון הזה לא סקיילבילי ויקרוס ברגע שהעומס יגדל.,negative
+seed_100_30,seed_100,30,ה-solution הזה לא scalable ויקרוס ברגע שה-load יגדל.,negative
+seed_100_60,seed_100,60,This solution isn't scalable ו-it'll collapse the moment the load increases.,negative
+seed_100_100,seed_100,100,This solution isn't scalable and it'll collapse the moment the load increases.,negative
+seed_101_0,seed_101,0,זה אוברהד מיותר לתחזק שני מערכות שעושות בדיוק אותו דבר.,negative
+seed_101_30,seed_101,30,זה unnecessary overhead לתחזק two systems שעושות exactly אותו דבר.,negative
+seed_101_60,seed_101,60,It's unnecessary overhead לmaintain two systems that do exactly the same thing.,negative
+seed_101_100,seed_101,100,It's unnecessary overhead to maintain two systems that do exactly the same thing.,negative
+seed_102_0,seed_102,0,המודל מוגבל למספר טוקנים מסוים בכל בקשה.,neutral
+seed_102_30,seed_102,30,ה-model מוגבל ל-number של tokens מסוים בכל request.,neutral
+seed_102_60,seed_102,60,The model is limited ל-a certain number of tokens בevery request.,neutral
+seed_102_100,seed_102,100,The model is limited to a certain number of tokens per request.,neutral
+seed_103_0,seed_103,0,עברנו את מגבלת הטוקנים והבקשה נכשלה.,negative
+seed_103_30,seed_103,30,עברנו את ה-token limit וה-request נכשלה.,negative
+seed_103_60,seed_103,60,We went over the token limit ו-the request failed.,negative
+seed_103_100,seed_103,100,We went over the token limit and the request failed.,negative
+seed_104_0,seed_104,0,קיבלתי בונוס יפה בסוף השנה על התרומה שלי לפרויקט.,positive
+seed_104_30,seed_104,30,קיבלתי bonus יפה בסוף ה-year על ה-contribution שלי ל-project.,positive
+seed_104_60,seed_104,60,I got a nice bonus בסוף the year for my contribution ל-the project.,positive
+seed_104_100,seed_104,100,I got a nice bonus at the end of the year for my contribution to the project.,positive
+seed_105_0,seed_105,0,הבונוס השנה היה נמוך משמעותית מהציפיות של הצוות.,negative
+seed_105_30,seed_105,30,ה-bonus השנה היה significantly lower מ-expectations של ה-team.,negative
+seed_105_60,seed_105,60,The bonus השנה was significantly lower than the team's expectations.,negative
+seed_105_100,seed_105,100,The bonus this year was significantly lower than the team's expectations.,negative
