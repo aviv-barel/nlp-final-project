@@ -7,3 +7,4 @@ results/finetune_runs/*/
 .DS_Store
 .env
 .idea/
+report/
