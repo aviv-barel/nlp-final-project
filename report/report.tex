@@ -105,6 +105,48 @@ is the first multilingual encoder to improve on XLM-R. For Hebrew, DictaBERT
 are strong Hebrew pretrained encoders. To our knowledge, neither Hebrew model
 has previously been evaluated on Hebrew--English code-switched input.
 
+\section{Novelty}
+\label{sec:novelty}
+
+This project contributes along three dimensions relative to the prior work
+above.
+
+\paragraph{Framing.} Existing code-switching resources, including
+\textsc{SentiMix}, \textsc{GLUECoS}, and \textsc{LinCE}, all treat mixing as a
+\emph{binary} property of a corpus: an item either is code-mixed or it is
+not. We instead treat mixing level as an \emph{ordered, controlled variable}
+by rendering the same 105 propositions at four fixed mixing levels
+(0/30/60/100\%) with meaning held constant. This turns the qualitative claim
+``code-mixed text is harder'' into a quantitative dose--response curve and
+lets us localise \emph{where} in that range a model fails, rather than only
+\emph{whether} it fails.
+
+\paragraph{Implementation.} To our knowledge, no existing dataset or
+evaluation covers Hebrew--English code-switching at all, let alone with
+graded, paraphrase-controlled mixing levels. Building one required a
+purpose-built generation and validation pipeline: constrained LLM generation
+conditioned on a fixed seed and sentiment, blind dual annotation (a human and
+a calibrated LLM annotator) with documented adjudication, and a seed-grouped
+train/val/test split that prevents near-paraphrase leakage across splits.
+This pipeline, and the resulting 420-item dataset, are new artefacts this
+project produces, not just an application of an existing benchmark to a new
+language pair.
+
+\paragraph{Interpretation.} Beyond measuring \emph{that} accuracy degrades,
+we give a representational account of \emph{why}: embedding drift from each
+sentence's 0\% form tracks its accuracy loss across models and mixing levels
+($\rho=0.93$). We then corroborate this account with an independent,
+label-free semantic-equivalence check that requires no fine-tuned classifier
+at all, and find it breaks down over the identical 30--60\% mixing window.
+Two different measurement approaches converging on the same window is a
+novel piece of triangulating evidence not present in prior code-switching
+benchmarks, which typically report accuracy alone. Finally, the finding that
+the Hebrew-\emph{specific} encoder is \emph{less} robust to Hebrew--English
+mixing than the general multilingual encoder is counter-intuitive relative to
+the usual assumption that language-specific pretraining helps on
+in-language text, and is itself a novel, testable claim for future work on
+other language pairs.
+
 \section{Methodology}
 
 \paragraph{Dataset construction.} We wrote 105 seed sentences in Israeli tech
